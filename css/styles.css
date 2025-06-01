@@ -101,11 +101,11 @@ img {
   letter-spacing: 0.02em;
   color: #2e2f42;
   padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.current {
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.current::after {
@@ -153,7 +153,10 @@ img {
 .hero {
   background-color: #2e2f42;
   padding: 188px 0;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(../images/hero-bg.jpg);
   max-width: 1440px;
   margin: 0 auto;
@@ -234,10 +237,11 @@ img {
   background-color: #f4f4fd;
   padding: 24px 100px;
   margin: 0 auto;
+  height: 112px;
+  margin-bottom: 8px;
 }
 
 .features-subtitle {
-  margin-top: 8px;
   margin-bottom: 8px;
 }
 
@@ -263,9 +267,12 @@ img {
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
+.team-wrap-text {
+  padding: 32px 0;
+}
+
 .team-content {
-  padding-top: 32px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .team-subtitle {
@@ -283,7 +290,6 @@ img {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding-bottom: 32px;
 }
 
 .team-social-link,
@@ -297,8 +303,10 @@ img {
   background-color: #4d5ae5;
 }
 
-.team-item:hover .team-social-link {
+.team-social-link:hover,
+.team-social-link:focus {
   background-color: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-icon {
@@ -329,9 +337,11 @@ img {
   transform: translate(0);
 }
 
-.portfolio-item:hover {
+.portfolio-item:hover,
+.portfolio-item:focus {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-cover {
@@ -391,11 +401,6 @@ img {
   display: flex;
 }
 
-.footer-logo-text {
-  display: inline-block;
-  margin-right: 120px;
-}
-
 .footer-text {
   max-width: 264px;
 }
@@ -432,6 +437,18 @@ img {
   margin-bottom: 16px;
 }
 
-.footer-social-list:hover .footer-social-link {
+.footer-social-link:hover,
+.footer-social-link:focus {
   background-color: #31d0aa;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 120px;
+}
+
+.footer-container {
+  padding: 0 156px;
 }
