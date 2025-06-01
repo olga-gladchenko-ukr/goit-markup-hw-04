@@ -431,3 +431,7 @@ img {
 .footer-social-text {
   margin-bottom: 16px;
 }
+
+.footer-social-list:hover .footer-social-link {
+  background-color: #31d0aa;
+}
